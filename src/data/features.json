@@ -1,0 +1,59 @@
+[
+  {
+    "id":1,
+    "feature":"automod",
+    "description":"Supports dynamic auto-mod of channels",
+    "left":"br",
+    "icon":"fa-robot"
+  },
+  {
+    "id":2,
+    "feature":"prefix-commands",
+    "description":"Supports a wide range of prefix commands",
+    "left":"tr",
+    "icon":"fa-terminal"
+  },
+  {
+    "id":3,
+    "feature":"slash-commands",
+    "description":"Bunch of slash commands are avaliable with easy to use syntax",
+    "left":"br",
+    "icon":"fa-slash"
+
+  },
+  {
+    "id":4,
+    "feature":"afk",
+    "description":"Set Afk command is avaliable with easy to use syntax.",
+    "left":"tl",
+    "icon":"fa-chalkboard-user"
+  },
+  {
+    "id":5,
+    "feature":"mod-log",
+    "description":"Logs all moderation actions (vc-log, message-delete, join-log etc.) in a channel.",
+    "left":"br",
+    "icon":"fa-scroll"
+  },
+  {
+    "id":6,
+    "feature":"welcomer",
+    "description": "Customizable welcome messages for new members.",
+    "left": "tl",
+    "icon":"fa-door-open"
+  },
+  {
+    "id":7,
+    "feature":"extra",
+    "description": "Extra features like purge, av, embed and many more",
+    "left":"bl",
+    "icon":"fa-gem"
+  },
+  {
+    "id":8,
+    "feature":"socail",
+    "description": "Pull your direct social updates directly to your server.",
+    "left":"tr",
+    "icon":"fa-hashtag"
+  }
+]

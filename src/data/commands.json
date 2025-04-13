@@ -1,0 +1,178 @@
+[
+  {
+    "category": "Getting Started",
+    "commands": [
+      {
+        "name": "help",
+        "description": "Shows all commands or info about a specific command",
+        "usage": "s!help [command]",
+        "example": "s!help prefix",
+        "aliases": ["h", "commands"],
+        "image": null,
+        "usageNotes": {
+          "required": ["command"],
+          "optional": ["subcommand"]
+        }
+      },
+      {
+        "name": "prefix",
+        "description": "Change the bot prefix for your server",
+        "usage": "s!prefix <new_prefix>",
+        "example": "s!prefix !",
+        "permission": "ADMINISTRATOR",
+        "image": null,
+        "usageNotes": {
+          "required": ["new_prefix"],
+          "optional": []
+        }
+      },
+      {
+        "name": "ping",
+        "description": "Check the bot's response time",
+        "usage": "s!ping",
+        "example": "s!ping",
+        "image": null,
+        "usageNotes": {
+          "required": [],
+          "optional": []
+        }
+      }
+    ]
+  },
+  {
+    "category": "Moderation",
+    "commands": [
+      {
+        "name": "ban",
+        "description": "Ban a member from the server",
+        "usage": "s!ban <@user> [reason]",
+        "example": "s!ban @user Breaking rules",
+        "permission": "BAN_MEMBERS"
+      },
+      {
+        "name": "kick",
+        "description": "Kick a member from the server",
+        "usage": "s!kick <@user> [reason]",
+        "example": "s!kick @user Misbehaving",
+        "permission": "KICK_MEMBERS"
+      },
+      {
+        "name": "mute",
+        "description": "Mute a member in the server",
+        "usage": "s!mute <@user> <duration> [reason]",
+        "example": "s!mute @user 1h Spamming",
+        "permission": "MANAGE_ROLES"
+      },
+      {
+        "name": "purge",
+        "description": "Delete a specified number of messages",
+        "usage": "s!purge <amount>",
+        "example": "s!purge 10",
+        "permission": "MANAGE_MESSAGES"
+      }
+    ]
+  },
+  {
+    "category": "AutoMod",
+    "commands": [
+      {
+        "name": "automod",
+        "description": "Configure automod settings for your server",
+        "usage": "s!automod <enable/disable> [feature]",
+        "example": "s!automod enable links",
+        "permission": "MANAGE_SERVER"
+      },
+      {
+        "name": "antilink",
+        "description": "Enable/disable link filtering",
+        "usage": "s!antilink <on/off>",
+        "example": "s!antilink on",
+        "permission": "MANAGE_SERVER"
+      },
+      {
+        "name": "antispam",
+        "description": "Configure spam protection settings",
+        "usage": "s!antispam <threshold> <duration>",
+        "example": "s!antispam 5 10s",
+        "permission": "MANAGE_SERVER"
+      }
+    ]
+  },
+  {
+    "category": "Logging",
+    "commands": [
+      {
+        "name": "setlog",
+        "description": "Set up logging channels for different events",
+        "usage": "s!setlog <type> <#channel>",
+        "example": "s!setlog mod #mod-logs",
+        "permission": "MANAGE_CHANNELS"
+      },
+      {
+        "name": "vclog",
+        "description": "Enable voice channel activity logging",
+        "usage": "s!vclog <#channel>",
+        "example": "s!vclog #vc-logs",
+        "permission": "MANAGE_CHANNELS"
+      },
+      {
+        "name": "messagelog",
+        "description": "Enable message deletion/edit logging",
+        "usage": "s!messagelog <#channel>",
+        "example": "s!messagelog #msg-logs",
+        "permission": "MANAGE_CHANNELS"
+      }
+    ]
+  },
+  {
+    "category": "Utility",
+    "commands": [
+      {
+        "name": "userinfo",
+        "description": "Display information about a user",
+        "usage": "s!userinfo [@user]",
+        "example": "s!userinfo @user",
+        "aliases": ["ui", "whois"]
+      },
+      {
+        "name": "serverinfo",
+        "description": "Display information about the server",
+        "usage": "s!serverinfo",
+        "example": "s!serverinfo",
+        "aliases": ["si"]
+      },
+      {
+        "name": "afk",
+        "description": "Set your AFK status with an optional reason",
+        "usage": "s!afk [reason]",
+        "example": "s!afk Be back in 30 minutes"
+      }
+    ]
+  },
+  {
+    "category": "Setup",
+    "commands": [
+      {
+        "name": "welcome",
+        "description": "Configure welcome message settings",
+        "usage": "s!welcome <channel/message/toggle> [value]",
+        "example": "s!welcome message Welcome {user} to {server}!",
+        "permission": "MANAGE_GUILD"
+      },
+      {
+        "name": "autorole",
+        "description": "Set up automatic role assignment for new members",
+        "usage": "s!autorole <@role>",
+        "example": "s!autorole @Member",
+        "permission": "MANAGE_ROLES"
+      },
+      {
+        "name": "reactionrole",
+        "description": "Create a reaction role message",
+        "usage": "s!reactionrole <#channel> <messageID> <emoji> <@role>",
+        "example": "s!reactionrole #roles 123456789 👍 @Games",
+        "permission": "MANAGE_ROLES"
+      }
+    ]
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "faqs": [
+    {
+      "id": 1,
+      "question": "What is Sergio Bot?",
+      "answer": "Sergio is an advanced Discord moderation bot designed to help server administrators maintain a safe and organized community. It offers features like auto-moderation, custom commands, and comprehensive server management tools."
+    },
+    {
+      "id": 2,
+      "question": "How do I set up basic moderation?",
+      "answer": "To set up basic moderation, use the /config command to customize auto-mod settings, warning thresholds, and moderation logs. You can also set specific channels for logging and configure permission levels for different roles."
+    },
+    {
+      "id": 3,
+      "question": "Is Sergio Bot free to use?",
+      "answer": "Yes, Sergio Bot is free to use with a generous set of features in the basic plan. We also offer premium features for enhanced server management and customization options."
+    },
+    {
+      "id": 4,
+      "question": "What makes Sergio different from other moderation bots?",
+      "answer": "Sergio stands out with its intelligent auto-moderation system, customizable workflows, and user-friendly interface. It's designed to be both powerful and easy to use, with regular updates and dedicated support."
+    },
+    {
+      "id": 5,
+      "question": "Can I customize the bot's responses?",
+      "answer": "Yes, you can customize most of Sergio's responses and commands using the /customize command. This includes welcome messages, warning notifications, and moderation announcements."
+    },
+    {
+      "id": 6,
+      "question": "How do I report issues or get support?",
+      "answer": "You can join our support server through the 'Support' button on our website, or use the /report command in Discord. Our team typically responds within 24 hours."
+    }
+  ]
+}
