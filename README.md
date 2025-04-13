@@ -11,11 +11,11 @@ Welcome to Sergio! This is the official documentation website for Sergio bot, bu
 
 ### Installation
 
-1. Clone the repository:
+1. Clone Sergio (bot) repository:
 
 ```bash
-git clone https://github.com/yourusername/Sergio.git
-cd Sergio
+git clone https://github.com/alokraj-05/Discord-Moderation-Bot.git
+cd Discord-Moderation-Bot
 ```
 
 2. Install dependencies:
@@ -26,15 +26,13 @@ npm install
 yarn install
 ```
 
-3. Start the development server:
+3. Start the development node:
 
 ```bash
-npm run dev
+node index.js
 # or
-yarn dev
+nodemon
 ```
-
-The site will be available at `http://localhost:5173`
 
 ## 📚 Documentation
 
@@ -48,9 +46,9 @@ For comprehensive information about Sergio bot, please visit our:
 
 ## 🛠️ Built With
 
-- [React](https://reactjs.org/)
-- [Vite](https://vitejs.dev/)
-- [Tailwind CSS](https://tailwindcss.com/)
+- [discord.js](https://discord.js.org/)
+- [JavaScript](https://www.javascript.com/)
+- [Node.js](https://nodejs.org/en)
 
 ## 📝 License
 
