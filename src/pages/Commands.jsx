@@ -1,4 +1,4 @@
-import React, { useState, lazy, Suspense } from "react";
+import React, { useState, lazy, Suspense, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import commands from "../data/commands.json";
 
@@ -8,6 +8,36 @@ const Commands = () => {
   const [activeCategory, setActiveCategory] = useState("Getting Started");
   const [searchQuery, setSearchQuery] = useState("");
   const [isSearchFocused, setIsSearchFocused] = useState(false);
+
+  // Add scroll to top behavior
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  // Reference to search input
+  const searchInputRef = React.useRef(null);
+
+  // Handle keyboard shortcuts
+  useEffect(() => {
+    const handleKeyboardShortcut = (e) => {
+      // Check for Ctrl+K or forward slash
+      if ((e.ctrlKey && e.key === "k") || (!e.ctrlKey && e.key === "/")) {
+        e.preventDefault();
+        setIsSearchFocused(true);
+        searchInputRef.current?.focus();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyboardShortcut);
+    return () => window.removeEventListener("keydown", handleKeyboardShortcut);
+  }, []);
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      e.target.blur();
+      setIsSearchFocused(false);
+    }
+  };
 
   const categories = commands.map((cat) => cat.category);
 
@@ -85,13 +115,15 @@ const Commands = () => {
                 }`}
               >
                 <input
+                  ref={searchInputRef}
                   type="text"
-                  placeholder="Search all commands..."
+                  placeholder="Search all commands... (Press '/' or Ctrl+K)"
                   className="w-full px-4 py-3 rounded-lg bg-gray-800/30 border border-gray-700/50 focus:outline-none focus:border-violet-400/50 transition-colors pl-10"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   onFocus={() => setIsSearchFocused(true)}
                   onBlur={() => setIsSearchFocused(false)}
+                  onKeyDown={handleKeyDown}
                 />
                 <i className="fa-solid fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
                 {searchQuery && (

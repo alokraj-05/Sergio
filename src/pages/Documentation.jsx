@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -9,6 +9,9 @@ const Documentation = () => {
   if (isCommandsPage) {
     return <Outlet />;
   }
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#0e0e0e] text-white py-20">

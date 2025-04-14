@@ -11,6 +11,7 @@ const Home = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const handleScreenChange = () => {
       setScreenWidth(window.innerWidth);
     };
