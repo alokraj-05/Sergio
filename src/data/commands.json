@@ -50,6 +50,27 @@
         "permission": "BAN_MEMBERS"
       },
       {
+        "name": "unban",
+        "description": "Unban a member from the server",
+        "usage": "s!ub <user_id>",
+        "example": "s!ub 112233445566778899",
+        "permission": "BAN_MEMBERS"
+      },
+      {
+        "name": "massban",
+        "description": "Mass ban users upto 100 member at a time.",
+        "usage": "s!ban <count> [reason]",
+        "example": "s!ban 70 Breaking rules",
+        "permission": "ADMINISTRATOR"
+      },
+      {
+        "name": "fetch-ban",
+        "description": "Fetch all the banned user.",
+        "usage": "s!fb",
+        "example": "s!ban",
+        "permission": "BAN_MEMBERS"
+      },
+      {
         "name": "kick",
         "description": "Kick a member from the server",
         "usage": "s!kick <@user> [reason]",
@@ -64,10 +85,66 @@
         "permission": "MANAGE_ROLES"
       },
       {
+        "name": "addRole",
+        "description": "Add role to user",
+        "usage": "s!r <user_name/@user> <role_name/@role>",
+        "example": "s!r @user @role",
+        "permission": "MANAGE_ROLES"
+      },
+      {
+        "name": "remove-role",
+        "description": "Remove role from user",
+        "usage": "s!rrole <user_name/@user> <role_name/@role>",
+        "example": "s!rrole @user @role",
+        "permission": "MANAGE_ROLES"
+      },
+      {
+        "name": "setname",
+        "description": "Set nickname for the user",
+        "usage": "s!sn <@user> [new_nickname]",
+        "example": "s!sn @john Doe",
+        "permission": "MANAGE_NICKNAMES"
+      },
+      {
         "name": "purge",
         "description": "Delete a specified number of messages",
         "usage": "s!purge <amount>",
         "example": "s!purge 10",
+        "permission": "MANAGE_MESSAGES"
+      },
+      {
+        "name":"lock",
+        "description": "Lock a channel (deny: Send message)",
+        "usage": "s!lock",
+        "example": "s!lock",
+        "permission": "MANAGE_CHANNELS"
+      },
+      {
+        "name": "unlock",
+        "description": "Unlock a channel (allow: send Message).",
+        "usage": "s!unlock",
+        "example": "s!unlock",
+        "permission": "MANAGE_MESSAGES"
+      },
+      {
+        "name":"iw",
+        "description": "Set inappropriate words, use s!iw true only for 1st time after s!iw <word>",
+        "usage": "s!iw <true> <word> [word word]",
+        "example": "s!iw true n**ga",
+        "permission": "MANAGE_MESSAGES"
+      },
+      {
+        "name":"iw show",
+        "description": "Get all saved inappropriate words",
+        "usage": "s!iw <show>",
+        "example": "s!iw show",
+        "permission": "MANAGE_MESSAGES"
+      },
+      {
+        "name":"iw ignore-role",
+        "description": "Privilege role to ignore inappropriate words",
+        "usage": "s!iw ignore-role <@role>",
+        "example": "s!iw ignore-role @admin",
         "permission": "MANAGE_MESSAGES"
       }
     ]
@@ -121,12 +198,20 @@
         "usage": "s!messagelog <#channel>",
         "example": "s!messagelog #msg-logs",
         "permission": "MANAGE_CHANNELS"
+      },
+      {
+        "name": "messagelog",
+        "description": "Enable message deletion/edit logging",
+        "usage": "s!messagelog <#channel>",
+        "example": "s!messagelog #msg-logs",
+        "permission": "MANAGE_CHANNELS"
       }
     ]
   },
   {
     "category": "Utility",
     "commands": [
+      
       {
         "name": "userinfo",
         "description": "Display information about a user",
@@ -146,6 +231,51 @@
         "description": "Set your AFK status with an optional reason",
         "usage": "s!afk [reason]",
         "example": "s!afk Be back in 30 minutes"
+      },
+      {
+        "name": "adminLog users",
+        "description": "Get users with admin perms",
+        "usage": "s!admin <u>",
+        "example": "s!admin u",
+        "aliases":["users"]
+      },
+      {
+        "name": "adminLog bot",
+        "description": "Get bots with admin perms",
+        "usage": "s!admin <u> [-b]",
+        "example": "s!admin u -b",
+        "aliases":["users"]
+      },
+      {
+        "name": "adminLog roles",
+        "description": "Get roles with admin perms",
+        "usage": "s!admin <r>",
+        "example": "s!admin r",
+        "aliases":["role"]
+      },
+      {
+        "name": "banner",
+        "description": "Get user banner",
+        "usage": "s!banner <@user>",
+        "example": "s!banner @john"
+      },
+      {
+        "name": "avatar",
+        "description": "Get user server avatar",
+        "usage": "s!av <@user>",
+        "example": "s!av @john"
+      },
+      {
+        "name": "profile-pic",
+        "description": "Get user global avatar",
+        "usage": "s!pfp <@user>",
+        "example": "s!pfp @john"
+      },
+      {
+        "name": "gitu",
+        "description": "find github profile",
+        "usage": "s!gitu <github_username>",
+        "example": "s!gitu alokraj-05"
       }
     ]
   },
@@ -160,17 +290,31 @@
         "permission": "MANAGE_GUILD"
       },
       {
-        "name": "autorole",
-        "description": "Set up automatic role assignment for new members",
-        "usage": "s!autorole <@role>",
-        "example": "s!autorole @Member",
-        "permission": "MANAGE_ROLES"
-      },
-      {
         "name": "reactionrole",
         "description": "Create a reaction role message",
         "usage": "s!reactionrole <#channel> <messageID> <emoji> <@role>",
         "example": "s!reactionrole #roles 123456789 👍 @Games",
+        "permission": "MANAGE_ROLES"
+      },
+      {
+        "name": "join-role add",
+        "description": "Setup join role for new users",
+        "usage": "s!joinrole -a <@role>",
+        "example": "s!reactionrole -a @family",
+        "permission": "MANAGE_ROLES"
+      },
+      {
+        "name": "join-role update",
+        "description": "Update previous setup join role",
+        "usage": "s!joinrole -u <@prev_role> <@new_role>",
+        "example": "s!reactionrole -u @family @member",
+        "permission": "MANAGE_ROLES"
+      },
+      {
+        "name": "join-role remove",
+        "description": "Remove join role setup",
+        "usage": "s!joinrole -r <@role>",
+        "example": "s!reactionrole -r @member",
         "permission": "MANAGE_ROLES"
       }
     ]
