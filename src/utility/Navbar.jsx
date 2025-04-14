@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import logo from "../assets/Sergio_log.png";
-import github from "../assets/github.png";
 import { Link } from "react-router-dom";
 const Navbar = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
