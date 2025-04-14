@@ -41,20 +41,20 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/privacy-policy"
+                <a
+                  to="https://github.com/alokraj-05/Sergio/blob/main/src/pages/privacyPolicy.md"
                   className="text-gray-300/80 hover:text-violet-400/80 text-sm transition-colors"
                 >
                   Privacy Policy
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
-                  to="/tos"
+                <a
+                  to="https://github.com/alokraj-05/Sergio/blob/main/src/pages/TOS.md"
                   className="text-gray-300/80 hover:text-violet-400/80 text-sm transition-colors"
                 >
                   Terms of Service
-                </Link>
+                </a>
               </li>
               <li>
                 <a
