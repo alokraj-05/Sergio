@@ -143,8 +143,8 @@ const Home = () => {
         >
           <div className="flex items-center gap-2 relative rounded-full z-10 bg-black px-6 py-3">
             <i className="fa-solid fa-terminal text-violet-400/80" />
-            <span className="text-violet-400/80 font-medium">100+</span>
-            <span className="text-white font-medium">more commands</span>
+            <span className="text-violet-400/80 font-medium">50+</span>
+            <span className="text-white font-medium"> commands</span>
             <i className="fa-solid fa-arrow-right text-violet-400/80" />
           </div>
         </Link>

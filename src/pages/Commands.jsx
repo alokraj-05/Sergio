@@ -72,7 +72,8 @@ const Commands = () => {
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4 font-syne">Bot Commands</h1>
           <p className="text-gray-400">
-            Browse and search all available commands
+            Browse and search all available commands. Total Commands{" "}
+            {commands.map((c) => c.commands).flat().length}
           </p>
         </div>
 
