@@ -107,12 +107,7 @@ const Navbar = () => {
                 Support
               </a>
               <a href="https://github.com/alokraj-05/Discord-Moderation-Bot">
-                <img
-                  src={github}
-                  alt="github_logo"
-                  className="w-7 hover:scale-105 transition-all duration-100"
-                  target="__blank"
-                />
+                <i className="fa-brands fa-github text-2xl text-violet-400"></i>
               </a>
             </ul>
           </div>
