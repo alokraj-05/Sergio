@@ -61,7 +61,7 @@
         "description": "Mass ban users upto 100 member at a time.",
         "usage": "s!ban <count> [reason]",
         "example": "s!ban 70 Breaking rules",
-        "permission": "ADMINISTRATOR"
+        "permission": "SERVER_OWNER"
       },
       {
         "name": "fetch-ban",

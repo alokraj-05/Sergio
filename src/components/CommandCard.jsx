@@ -40,7 +40,9 @@ const CommandCard = ({ command }) => {
   };
 
   // Check if command is potentially dangerous (admin commands that can't be easily reverted)
-  const isDangerous = command.permission === "ADMINISTRATOR";
+  const isDangerous =
+    command.permission === "ADMINISTRATOR" ||
+    command.permission === "SERVER_OWNER";
 
   return (
     <motion.div
